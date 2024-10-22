@@ -1,0 +1,67 @@
+<?php get_header();?> 
+
+  <div class="main-content"> 
+       <div class="side-content">
+          <div>
+              <div class="title-content">
+                  <div class="main-title">
+                    <h1>ANGEL,NUMBER</h1>
+                    <hr>
+                 </div>
+                    <li  style="padding-top:20px;">Numerologsign</li>
+               </div>
+
+            <div class="date-blog">
+                  <h4 class="">Archives</h4>
+                    <ol class="l">
+
+                  <?php
+                      wp_nav_menu(array(
+                          'theme_location' => 'primary',
+                          'container_class' => 'container-menu-class',
+                        ));
+                          
+                  ?>
+                  </ol>
+             </div>
+        </div>
+
+        <div class="ADVERSITE">
+                ADVERSITE
+          <div class="adds">
+
+          </div>
+
+        </div>
+
+     </div>
+
+      
+    <div class="tried-content">
+
+      
+     
+       <div class="content">
+           <div class="content-Post">
+              <p class="blog-post-meta">December 14, 2020 by </p>
+                   
+                
+              <?php if( have_posts()): ?>
+               
+               <?php while (have_posts()) : the_post(); ?>
+
+               <div class="second-section">
+                  <div>
+                     <p href="<?= the_permalink();?>";><?= the_title();?></p>
+
+                     <p><?= the_excerpt(); // the_content();?></p>
+                  </div>
+                   
+               </div>
+       
+
+           </div>
+       </div>
+<?php get_footer();?>
+             
+ 
